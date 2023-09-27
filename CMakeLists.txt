@@ -317,7 +317,7 @@ endif()
 
 # --------------------------------------------------
 # Subdirectories that need to be processed
-option(USE_OPTIMIZED_BLAS "Whether or not to use an optimized BLAS library instead of included netlib BLAS" OFF)
+option(USE_OPTIMIZED_BLAS "Whether or not to use an optimized BLAS library instead of included netlib BLAS" ON)
 
 # Check the usage of the user provided BLAS libraries
 if(BLAS_LIBRARIES)
@@ -373,7 +373,7 @@ if(USE_XBLAS)
   find_library(XBLAS_LIBRARY NAMES xblas)
 endif()
 
-option(USE_OPTIMIZED_LAPACK "Whether or not to use an optimized LAPACK library instead of included netlib LAPACK" OFF)
+option(USE_OPTIMIZED_LAPACK "Whether or not to use an optimized LAPACK library instead of included netlib LAPACK" ON)
 
 # --------------------------------------------------
 # LAPACK
@@ -422,7 +422,7 @@ endif()
 
 # --------------------------------------------------
 # LAPACKE
-option(LAPACKE "Build LAPACKE" OFF)
+option(LAPACKE "Build LAPACKE" ON)
 
 # LAPACKE has also the interface to some routines from tmglib,
 # if LAPACKE_WITH_TMG is selected, we need to add those routines to LAPACKE
